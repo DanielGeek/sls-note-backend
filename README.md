@@ -6,6 +6,7 @@
 - AWS CodeCommit
 - AWS CodePipeline CI/CD
 - AWS Lambda
+- API Gateway
 
 # API paths
 - Create a note / POST http://api_notes.us.to/prod/note
@@ -43,3 +44,11 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 # Run serverless-offiline
 `serverless offline`
+
+### Project Architecture:
+![Serverless Web Application on AWS Architecture](images/CodeCommit.png)
+![Serverless Web Application on AWS Architecture](images/DynamoDB.png)
+![Serverless Web Application on AWS Architecture](images/Lambdas.png)
+![Serverless Web Application on AWS Architecture](images/CodePipeline.png)
+![Serverless Web Application on AWS Architecture](images/CodePipeline2.png)
+![Serverless Web Application on AWS Architecture](images/API-Gateway.png)
