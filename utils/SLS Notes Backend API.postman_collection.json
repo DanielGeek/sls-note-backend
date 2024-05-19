@@ -9,6 +9,9 @@
 		{
 			"name": "POST /note",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [
 					{
@@ -29,7 +32,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"Item\": {\n        \"title\": \"My note 8\",\n        \"content\": \"Content of my note 8\",\n        \"cat\": \"general\"\n    }\n}",
+					"raw": "{\n    \"Item\": {\n        \"title\": \"My note 10\",\n        \"content\": \"Content of my note 10\",\n        \"cat\": \"general\"\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -37,12 +40,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/prod/note",
-					"protocol": "http",
+					"raw": "{{ENV_NAME}}/prod/note",
 					"host": [
-						"localhost"
+						"{{ENV_NAME}}"
 					],
-					"port": "3000",
 					"path": [
 						"prod",
 						"note"
@@ -54,6 +55,9 @@
 		{
 			"name": "DELETE /note",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "DELETE",
 				"header": [
 					{
@@ -82,12 +86,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/prod/note/t/1716083940",
-					"protocol": "http",
+					"raw": "{{ENV_NAME}}/prod/note/t/1716083940",
 					"host": [
-						"localhost"
+						"{{ENV_NAME}}"
 					],
-					"port": "3000",
 					"path": [
 						"prod",
 						"note",
@@ -104,6 +106,9 @@
 				"disableBodyPruning": true
 			},
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "GET",
 				"header": [
 					{
@@ -132,17 +137,15 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/prod/note/n/test_user:76468e21-bc78-4cbc-8ce2-c0101d9d36ec",
-					"protocol": "http",
+					"raw": "{{ENV_NAME}}/prod/note/n/test_user:5af4d3c3-2a12-4fa3-9a15-c27c41ba10d6",
 					"host": [
-						"localhost"
+						"{{ENV_NAME}}"
 					],
-					"port": "3000",
 					"path": [
 						"prod",
 						"note",
 						"n",
-						"test_user:76468e21-bc78-4cbc-8ce2-c0101d9d36ec"
+						"test_user:5af4d3c3-2a12-4fa3-9a15-c27c41ba10d6"
 					]
 				}
 			},
@@ -151,6 +154,9 @@
 		{
 			"name": "PATCH /note",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "PATCH",
 				"header": [
 					{
@@ -179,12 +185,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/prod/note",
-					"protocol": "http",
+					"raw": "{{ENV_NAME}}/prod/note",
 					"host": [
-						"localhost"
+						"{{ENV_NAME}}"
 					],
-					"port": "3000",
 					"path": [
 						"prod",
 						"note"
@@ -227,62 +231,9 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/prod/notes",
-					"protocol": "http",
+					"raw": "{{ENV_NAME}}/prod/notes",
 					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"prod",
-						"notes"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "PROD GET /notes",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "app_user_id",
-						"value": "test_user",
-						"type": "text"
-					},
-					{
-						"key": "app_user_name",
-						"value": "Test User",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    \"Item\": {\n        \"timestamp\": 1716083210,\n        \"note_id\": \"test_user:df25df98-4a73-4ed8-b93b-65d7e23ca385\",\n        \"title\": \"My first note updated\",\n        \"content\": \"Content of my first note updated\",\n        \"cat\": \"general\"\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "https://mshbauqhqf.execute-api.us-west-2.amazonaws.com/prod/notes",
-					"protocol": "https",
-					"host": [
-						"mshbauqhqf",
-						"execute-api",
-						"us-west-2",
-						"amazonaws",
-						"com"
+						"{{ENV_NAME}}"
 					],
 					"path": [
 						"prod",
@@ -326,12 +277,10 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3000/prod/notes?limit=5&start=1716083929",
-					"protocol": "http",
+					"raw": "{{ENV_NAME}}/prod/notes?limit=5&start=1716083929",
 					"host": [
-						"localhost"
+						"{{ENV_NAME}}"
 					],
-					"port": "3000",
 					"path": [
 						"prod",
 						"notes"

@@ -1,5 +1,22 @@
 # AWS Serverless REST API
 
+# AWS services used
+- IAM roles
+- AWS DynamoDB
+- AWS CodeCommit
+- AWS CodePipeline CI/CD
+- AWS Lambda
+
+# API paths
+- Create a note / POST http://api_notes.us.to/prod/note
+- Edit a Note / PATCH http://api_notes.us.to/prod/note
+- Get All notes / GET  http://api_notes.us.to/prod/note
+- GET note by Id  http://api_notes.us.to/prod/note/n/{note_id}
+- Delete note / DELETE  http://api_notes.us.to/prod/note/t/{timestamp}
+
+# Exported Postman json API
+utils/SLS Notes Backend API.postman_collection.json
+
 How run this project
 - Install libraries `npm i`
 - You will need creat a IAM user
@@ -26,10 +43,3 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
 # Run serverless-offiline
 `serverless offline`
-
-# API paths
-- POST http://localhost:3000/prod/note
-- PATCH http://localhost:3000/prod/note
-- GET  http://localhost:3000/prod/note
-- GET  http://localhost:3000/prod/note/n/{note_id}
-- DELETE  http://localhost:3000/prod/note/t/{timestamp}
