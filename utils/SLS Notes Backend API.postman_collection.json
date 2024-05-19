@@ -1,0 +1,303 @@
+{
+	"info": {
+		"_postman_id": "ae1c8b04-653d-4d03-813f-8aa5083e8891",
+		"name": "SLS Notes Backend API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6097804"
+	},
+	"item": [
+		{
+			"name": "POST /note",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "test_user",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "Test User",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Item\": {\n        \"title\": \"My note 8\",\n        \"content\": \"Content of my note 8\",\n        \"cat\": \"general\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prod/note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /note",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "test_user",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "Test User",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Item\": {\n        \"title\": \"My note 8\",\n        \"content\": \"Content of my note 8\",\n        \"cat\": \"general\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prod/note/t/1716083940",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"note",
+						"t",
+						"1716083940"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /note",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "test_user",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "Test User",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Item\": {\n        \"title\": \"My note 8\",\n        \"content\": \"Content of my note 8\",\n        \"cat\": \"general\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prod/note/n/test_user:76468e21-bc78-4cbc-8ce2-c0101d9d36ec",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"note",
+						"n",
+						"test_user:76468e21-bc78-4cbc-8ce2-c0101d9d36ec"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH /note",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "test_user",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "Test User",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Item\": {\n        \"timestamp\": 1716083210,\n        \"note_id\": \"test_user:df25df98-4a73-4ed8-b93b-65d7e23ca385\",\n        \"title\": \"My first note updated\",\n        \"content\": \"Content of my first note updated\",\n        \"cat\": \"general\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prod/note",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"note"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /notes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "test_user",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "Test User",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Item\": {\n        \"timestamp\": 1716083210,\n        \"note_id\": \"test_user:df25df98-4a73-4ed8-b93b-65d7e23ca385\",\n        \"title\": \"My first note updated\",\n        \"content\": \"Content of my first note updated\",\n        \"cat\": \"general\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prod/notes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"notes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /notes Paginated",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "app_user_id",
+						"value": "test_user",
+						"type": "text"
+					},
+					{
+						"key": "app_user_name",
+						"value": "Test User",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Item\": {\n        \"timestamp\": 1716083210,\n        \"note_id\": \"test_user:df25df98-4a73-4ed8-b93b-65d7e23ca385\",\n        \"title\": \"My first note updated\",\n        \"content\": \"Content of my first note updated\",\n        \"cat\": \"general\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/prod/notes?limit=5&start=1716083929",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"notes"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "5"
+						},
+						{
+							"key": "start",
+							"value": "1716083929"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
