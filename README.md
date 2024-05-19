@@ -10,7 +10,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 - library for deploy DynamoDB `npm install -g serverless`
 - Create Backend DynamoDB Table using serverless template `serverless deploy`
 
-# Git
+# Config Git codecommit
 - init repo `git init`
 - Create branch master `git checkout -b master`
 - Create branch dev `git checkout -b dev`
@@ -23,3 +23,13 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 -  push the code to master `git push --set-upstream origin master`
 - Repository https://git-codecommit.us-west-2.amazonaws.com/v1/repos/sls-notes-backend-repo
 - change default branch `aws codecommit update-default-branch --repository-name sls-notes-backend-repo --default-branch-name master --region us-west-2`
+
+# Run serverless-offiline
+`serverless offline`
+
+# API paths
+- POST http://localhost:3000/prod/note
+- PATCH http://localhost:3000/prod/note
+- GET  http://localhost:3000/prod/note
+- GET  http://localhost:3000/prod/note/n/{note_id}
+- DELETE  http://localhost:3000/prod/note/t/{timestamp}
