@@ -1,6 +1,6 @@
 # AWS Serverless REST API
 
-# AWS services used
+## AWS services used
 - IAM roles
 - AWS DynamoDB
 - AWS CodeCommit
@@ -8,17 +8,17 @@
 - AWS Lambda
 - API Gateway
 
-# API paths
+## API paths
 - Create a note / POST http://api_notes.us.to/prod/note
 - Edit a Note / PATCH http://api_notes.us.to/prod/note
 - Get All notes / GET  http://api_notes.us.to/prod/note
 - GET note by Id  http://api_notes.us.to/prod/note/n/{note_id}
 - Delete note / DELETE  http://api_notes.us.to/prod/note/t/{timestamp}
 
-# Exported Postman json API
-utils/SLS Notes Backend API.postman_collection.json
+## Exported Postman json API
+- utils/SLS Notes Backend API.postman_collection.json
 
-How run this project
+## How run this project
 - Install libraries `npm i`
 - You will need creat a IAM user
 https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users_create.html
@@ -28,7 +28,7 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 - library for deploy DynamoDB `npm install -g serverless`
 - Create Backend DynamoDB Table using serverless template `serverless deploy`
 
-# Config Git codecommit
+## Config Git codecommit
 - init repo `git init`
 - Create branch master `git checkout -b master`
 - Create branch dev `git checkout -b dev`
@@ -42,8 +42,8 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 - Repository https://git-codecommit.us-west-2.amazonaws.com/v1/repos/sls-notes-backend-repo
 - change default branch `aws codecommit update-default-branch --repository-name sls-notes-backend-repo --default-branch-name master --region us-west-2`
 
-# Run serverless-offiline
-`serverless offline`
+## Run serverless-offiline
+- `serverless offline`
 
 ### Project Architecture:
 ![Serverless Web Application on AWS Architecture](images/CodeCommit.png)
